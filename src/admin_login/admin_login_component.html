@@ -1,7 +1,16 @@
-<html>
-    <body>
+@if(adminlog){
+    <admin_panel></admin_panel>
+}
+@else if (teacherlog) {
+
+}
+@else if (studentlog) {
+    
+}
+@else{
         <form>
-        <table border>
+
+    <table border>
             <tr>
                 <td colspan="3">
                     <b>ADMIN LOGIN</b>
@@ -37,5 +46,5 @@
             </tr>
         </table>
         </form>
-    </body>
-</html>
+
+    }

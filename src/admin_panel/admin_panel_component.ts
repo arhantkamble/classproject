@@ -1,15 +1,14 @@
 import { Component, inject } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { Router } from "@angular/router";
 
 @Component({
     selector:'admin_panel',
+    standalone: true,
     templateUrl:'admin_panel_component.html',
     styleUrl: 'admin_panel_component.scss',
     imports:[FormsModule]
 })
 export class AdminPanel{
-    private router = inject(Router);
     
     addStu(){
 
@@ -18,6 +17,5 @@ export class AdminPanel{
 
     }
     exit(){
-        this.router.navigate(['/login']);
     }
 }

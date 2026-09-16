@@ -1,9 +1,7 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { AdminLogin } from './admin_login/admin_login_component';
-import { TeacherLogin } from './teacher_login/teacher_login_component';
-import { StudentLogin } from './student_login/student_login_component';
+import { AppComponent } from './app/app_component';
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';
 
-bootstrapApplication(AdminLogin)
-bootstrapApplication(TeacherLogin)
-bootstrapApplication(StudentLogin)
 
+bootstrapApplication(AppComponent, {providers:[provideRouter(routes)]})
