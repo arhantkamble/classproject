@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, output } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 @Component({
@@ -9,13 +9,15 @@ import { FormsModule } from "@angular/forms";
     imports:[FormsModule]
 })
 export class AdminPanel{
-    
-    addStu(){
+    onExit = output<void>();
 
+    addStu(){
+        alert("add student")
     }
     addTea(){
-
+        alert("add teacher")
     }
     exit(){
+        this.onExit.emit();
     }
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

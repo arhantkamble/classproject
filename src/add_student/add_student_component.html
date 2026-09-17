@@ -1,0 +1,51 @@
+<table>
+    <tr>
+        <td>
+            <table>
+
+            </table>
+        </td>
+        <td>
+            <table border="{1}">
+                <tr>
+                    <th>sr.</th>
+                    <th>Student ID</th>
+                    <th>Roll no</th>
+                    <th>Student Name</th>
+                    <th>Father Name</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Course</th>
+                    <th>Branch</th>
+                    <th>year</th>
+                    <th>Sem</th>
+                    <th>Mobile number</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Password</th>
+
+                </tr>
+                @for(person of persons;track person.id){
+                    <tr>
+                        <td>{{$index+1}}</td>
+                        <td>{{person.id}}</td>
+                        <td>{{person.rollNo}}</td>
+                        <td>{{person.name}}</td>
+                        <td>{{person.Fathername}}</td>
+                        <td>{{person.gender}}</td>
+                        <td>{{person.age}}</td>
+                        <td>{{person.course}}</td>
+                        <td>{{person.branch}}</td>
+                        <td>{{person.year}}</td>
+                        <td>{{person.sem}}</td>
+                        <td>{{person.mobileNo}}</td>
+                        <td>{{person.email}}</td>
+                        <td>{{person.address}}</td>
+                        <td>{{person.password}}</td>
+                        
+                    </tr>
+                }
+            </table>
+        </td>
+    </tr>
+</table>

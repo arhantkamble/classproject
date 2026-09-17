@@ -20,14 +20,21 @@ export class AdminLogin {
         if (this.id == "admin" && this.password == "1234") {
             this.adminlog=true
         }
-        if (this.id == "teacher" && this.password == "1234") {
+        else if(this.id == "teacher" && this.password == "1234") {
             this.teacherlog=true
         }
-        if (this.id == "student" && this.password == "1234") {
+        else if (this.id == "student" && this.password == "1234") {
             this.studentlog=true
         }
         else {
             alert("invalid credentials")
         }
     }
+    handleExit() {
+    this.adminlog = false;
+    this.teacherlog = false;
+    this.studentlog = false;
+    this.id = "";
+    this.password = "";
+  }
 }

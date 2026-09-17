@@ -1,11 +1,11 @@
 @if(adminlog){
-    <admin_panel></admin_panel>
+    <admin_panel (onExit)="handleExit()"></admin_panel>
 }
 @else if (teacherlog) {
 
 }
 @else if (studentlog) {
-    
+
 }
 @else{
         <form>
