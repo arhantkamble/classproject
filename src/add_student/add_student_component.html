@@ -1,9 +1,141 @@
 <table>
     <tr>
         <td>
+            <form>
             <table>
+                <tr>
+                    <th>StudentId:</th>
+                    <th>
+                        <input type="text" 
+                        name="stuId" 
+                        placeholder="Enter student id" 
+                        [(ngModel)]="id"/>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Roll no.:</th>
+                    <th>
+                        <input type="number" 
+                        name="rollNo" 
+                        placeholder="Enter rollNo" 
+                        [(ngModel)]="rollNo"/>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Student name:</th>
+                    <th>
+                        <input type="text" 
+                        name="name" 
+                        placeholder="Enter student name" 
+                        [(ngModel)]="name"/>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Father's Name:</th>
+                    <th>
+                        <input type="text" 
+                        name="fatherName" 
+                        placeholder="Enter Father's name" 
+                        [(ngModel)]="fatherName"/>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Gender:</th>
+                    <th>
+                        <form>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="radio" 
+                                        name="gender" 
+                                        value="male"
+                                        [(ngModel)]="gender"/>
+                                    </td>
+                                    <td>
+                                        <input type="radio" 
+                                        name="gender" 
+                                        value="female"
+                                        [(ngModel)]="gender"/>
+                                    </td>
+                                    <td>
+                                        <input type="radio" 
+                                        name="gender" 
+                                        value="others"
+                                        [(ngModel)]="gender"/>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </form>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Age:</th>
+                    <th>
+                        <input type="text" 
+                        placeholder="Enter student's age" 
+                        [(ngModel)]="age"/>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Branch</th>
+                    <th>
+                        <input type="text" 
+                        placeholder="Enter student's Branch" 
+                        [(ngModel)]="branch"/>
+                    </th>
+                </tr>
 
+                <tr>
+                    <th>Year</th>
+                    <th>
+                        <input type="text" 
+                        placeholder="Enter student's year" 
+                        [(ngModel)]="year"/>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Semister:</th>
+                    <th>
+                        <input type="number" 
+                        placeholder="Enter student's year" 
+                        [(ngModel)]="sem"/>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Mobile Number:</th>
+                    <th>
+                        <input type="text" 
+                        placeholder="Enter student's number" 
+                        [(ngModel)]="mobileNo"/>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <th>
+                        <input type="text" 
+                        placeholder="Enter student id" 
+                        [(ngModel)]="email"/>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Address:</th>
+                    <th>
+                        <input type="text" 
+                        placeholder="Enter student's address" 
+                        [(ngModel)]="address"/>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Password:</th>
+                    <th>
+                        <input type="text" 
+                        placeholder="Enter student's password" 
+                        [(ngModel)]="password"/>
+                    </th>
+                </tr>
             </table>
+            </form>
         </td>
         <td>
             <table border="{1}">
@@ -15,7 +147,6 @@
                     <th>Father Name</th>
                     <th>Gender</th>
                     <th>Age</th>
-                    <th>Course</th>
                     <th>Branch</th>
                     <th>year</th>
                     <th>Sem</th>
@@ -31,10 +162,9 @@
                         <td>{{person.id}}</td>
                         <td>{{person.rollNo}}</td>
                         <td>{{person.name}}</td>
-                        <td>{{person.Fathername}}</td>
+                        <td>{{person.fatherName}}</td>
                         <td>{{person.gender}}</td>
                         <td>{{person.age}}</td>
-                        <td>{{person.course}}</td>
                         <td>{{person.branch}}</td>
                         <td>{{person.year}}</td>
                         <td>{{person.sem}}</td>
