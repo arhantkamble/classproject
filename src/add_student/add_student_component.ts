@@ -2,7 +2,8 @@ import { Component } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 @Component({
-    selector:"main",
+    selector:"add_student",
+    standalone: true,
     templateUrl:"add_student_component.html",
     styleUrl:"add_student_component.scss",
     imports: [FormsModule]
@@ -10,7 +11,7 @@ import { FormsModule } from "@angular/forms";
 
 
 
-export class MainComponent{
+export class AddStudent{
     id=""
     rollNo=""
     name=""
@@ -24,6 +25,10 @@ export class MainComponent{
     email=""
     address=""
     password=""
+
+    save(){
+
+    }
 
     persons=[
         {

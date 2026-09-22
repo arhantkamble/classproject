@@ -42,7 +42,6 @@
                 <tr>
                     <th>Gender:</th>
                     <th>
-                        <form>
                             <table>
                                 <tr>
                                     <td>
@@ -50,23 +49,25 @@
                                         name="gender" 
                                         value="male"
                                         [(ngModel)]="gender"/>
+                                        Male
                                     </td>
                                     <td>
                                         <input type="radio" 
                                         name="gender" 
                                         value="female"
                                         [(ngModel)]="gender"/>
+                                        Female
                                     </td>
                                     <td>
                                         <input type="radio" 
                                         name="gender" 
                                         value="others"
                                         [(ngModel)]="gender"/>
+                                        Others
                                     </td>
                                 </tr>
                             </table>
                             
-                        </form>
                     </th>
                 </tr>
                 <tr>
@@ -132,6 +133,13 @@
                         <input type="text" 
                         placeholder="Enter student's password" 
                         [(ngModel)]="password"/>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <input type="button" 
+                        value="save"
+                        (click)="save()">
                     </th>
                 </tr>
             </table>
