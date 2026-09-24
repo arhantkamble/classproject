@@ -1,6 +1,9 @@
 @if (addStudent) {
     <add_student></add_student>
 }
+@else if (addTeacher) {
+    <add_teacher></add_teacher>
+}
 @else {
         <h2>Admin Panel</h2>
         <input type="button" value="Add Student" (click)="addStu()">

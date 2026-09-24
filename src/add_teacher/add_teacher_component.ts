@@ -16,4 +16,8 @@ export class AddTeacher{
     tMobNum=""
     tEmail=""
     tPass=""
+
+    save(){
+        
+    }
 }

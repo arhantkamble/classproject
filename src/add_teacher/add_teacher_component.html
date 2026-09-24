@@ -1,0 +1,85 @@
+
+    <table>
+        <tr>
+            <td><form>
+                <table>
+                    <tr>
+                        <td>
+                            Teacher Id:
+                        </td>
+                        <td>
+                            <input type="text"
+                            [(ngModel)]="tId"
+                            placeholder="Enter Teacher ID"
+                            >
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            Teacher Name:
+                        </td>
+                        <td>
+                            <input type="text"
+                            [(ngModel)]="tName"
+                            placeholder="Enter Teacher name"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Teacher Mobile number:
+                        </td>
+                        <td>
+                            <input type="text"
+                            [(ngModel)]="tMobNum"
+                            placeholder="Enter Teacher mobileNo"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Teacher Email:
+                        </td>
+                        <td>
+                            <input type="text"
+                            [(ngModel)]="tEmail"
+                            placeholder="Enter Teacher Email"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Teacher Password:
+                        </td>
+                        <td>
+                            <input type="text"
+                            [(ngModel)]="tPass"
+                            placeholder="Enter Teacher Password"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button"
+                            value="save"
+                            (click)="save()"
+                            >
+                        </td>
+                    </tr>
+                </table>
+            </form></td>
+            <td>
+                //table block
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                //search block
+            </td>
+            <td>
+                //blank block
+            </td>
+        </tr>
+    </table>
