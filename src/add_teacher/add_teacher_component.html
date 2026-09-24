@@ -54,6 +54,28 @@
         </td>
         <td>
             //table block
+            <table border="{1}">
+                <tr>
+                    <td>sr.no</td>
+                    <td>T ID</td>
+                    <td>T name</td>
+                    <td>T Mob.no.</td>
+                    <td>T Email</td>
+                    <td>T password</td>
+                </tr>
+            @for (teacher of teachers; track teacher.tId) {
+                <tr>
+                    <td>
+                        {{$index+1}}
+                    </td>
+                    <td>{{teacher.tId}}</td>
+                    <td>{{teacher.tName}}</td>
+                    <td>{{teacher.tMobNum}}</td>
+                    <td>{{teacher.tEmail}}</td>
+                    <td>{{teacher.tPass}}</td>
+                </tr>
+            }
+            </table>
         </td>
 
     </tr>

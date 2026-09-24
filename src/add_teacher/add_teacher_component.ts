@@ -18,6 +18,14 @@ export class AddTeacher{
     tPass=""
 
     save(){
-        
+
     }
+
+    teachers=[{
+        tId:101,
+        tName:"Nandini",
+        tMobNum:"1234567899",
+        tEmail:"teach@gmail.com",
+        tPass:"1234"
+    },]
 }
