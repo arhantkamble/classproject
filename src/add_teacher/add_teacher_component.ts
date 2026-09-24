@@ -10,5 +10,10 @@ import { FormsModule } from "@angular/forms";
 })
 
 export class AddTeacher{
-    
+
+    tId=""
+    tName=""
+    tMobNum=""
+    tEmail=""
+    tPass=""
 }
