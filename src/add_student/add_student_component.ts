@@ -30,7 +30,7 @@ export class AddStudent{
 
     }
 
-    persons=[
+    students=[
         {
             id:1,
             rollNo:101,
