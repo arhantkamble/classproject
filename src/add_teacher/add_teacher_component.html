@@ -53,6 +53,9 @@
                         <td>
                             <input type="button" value="save" (click)="save()">
                         </td>
+                        <td>
+                            <input type="button" value="update" (click)="update()">
+                        </td>
                     </tr>
                 </table>
             </form>
@@ -68,16 +71,20 @@
                     <td>T Email</td>
                     <td>T password</td>
                 </tr>
-            @for (teacher of teachers; track teacher.tId) {
+            @for (teacher of teachers; track teacher.tId; let i=$index) {
                 <tr>
                     <td>
-                        {{$index+1}}
+                        {{i+1}}
                     </td>
                     <td>{{teacher.tId}}</td>
                     <td>{{teacher.tName}}</td>
                     <td>{{teacher.tMobNum}}</td>
                     <td>{{teacher.tEmail}}</td>
                     <td>{{teacher.tPass}}</td>
+                    <td>
+                        <input type="button" value="Edit" (click)="edit(i)">
+                        <input type="button" value="Delete" (click)="delete(i)">
+                    </td>
                 </tr>
             }
             </table>
