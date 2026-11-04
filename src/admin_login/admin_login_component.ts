@@ -1,13 +1,14 @@
 import { Component, inject } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { AdminPanel } from "../admin_panel/admin_panel_component";
+import { TeacherPanel } from "../teacher_panel/teacher_panel_component.";
 
 @Component({
     selector: 'admin',
     standalone: true,
     templateUrl: 'admin_login_component.html',
     styleUrl: 'admin_login_component.scss',
-    imports: [FormsModule, AdminPanel]
+    imports: [FormsModule, AdminPanel, TeacherPanel]
 })
 export class AdminLogin {
     id = ""

@@ -1,0 +1,60 @@
+<table>
+    <tr>
+        <td colspan="2">
+            <input type="button" value="exit" (click)="exit()">
+            <input type="button" value="back" (click)="back()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <select name="subject" id="subject">
+                                <option Value="CC">Cloud Computing</option>
+                                <option Value="DL">Deep Learning</option>
+                                <option Value="RM">REsearch MEthodology</option>
+                                <option Value="MDM">MDM</option>
+                                <option Value="NLP">NLP</option>
+                                <option Value="CD">Compiler Design</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="button" value="storeData" (click)="store()">
+                        </td>
+                        <td>
+                            <input type="button" value="Attendance List" (click)="aList()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td colspan="2">
+                            <input 
+                                type="date"
+                                id="attendance-date" 
+                                name="attendanceDate" 
+                                [(ngModel)]="selectedDate"
+                                (change)="onDateChange()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="button" value="Generate Report" (click)="genReport()">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+    </tr>
+    <tr>
+        <td>
+            //search block
+        </td>
+        <td>
+            //blank block
+        </td>
+    </tr>
+</table>

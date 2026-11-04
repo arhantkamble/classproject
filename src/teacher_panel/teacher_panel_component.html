@@ -1,0 +1,16 @@
+@if (addStudent) {
+    <add_student (onStuBack)=handleBack() (onStuExit)=handleExit()></add_student>
+}
+
+@if (takeAttendance){
+    
+}
+
+@else {
+        <h2>Teacher Panel</h2>
+        <input type="button" value="Take Attendance" (click)="takeAttend()">
+        <input type="button" value="Add Student" (click)="addStu()">
+        <input type="button" value="Exit" (click)="exit()">
+
+}
+
