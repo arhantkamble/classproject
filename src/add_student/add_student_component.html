@@ -104,8 +104,11 @@
                         </th>
                     </tr>
                     <tr>
-                        <th colspan="2">
+                        <th>
                             <input type="button" value="save" (click)="save()">
+                        </th>
+                        <th>
+                            <input type="button" value="update" (click)="update()">
                         </th>
                         <th>
                             <input type="reset" value="clear" (click)="clearForm()"/>
@@ -134,6 +137,8 @@
                 </table>
             </form>
         </td>
+        </tr>
+        <tr>
         <td style="vertical-align: top;">
             <table border="1">
                 <tr>
@@ -152,6 +157,7 @@
                     <th>Address</th>
                     <th>Password</th>
                     <th>Photos</th>
+                    <th>Action</th>
                 </tr>
                 @for(student of students; track student.id){
                 <tr>
@@ -174,6 +180,10 @@
                         <div style="display: flex; gap: 4px;" *ngIf="student.images && student.images.length > 0">
                             <img *ngFor="let img of student.images" [src]="img" style="width: 35px; height: 35px; object-fit: cover; border-radius: 2px;" />
                         </div>
+                    </td>
+                    <td>
+                        <input type="button" value="Edit" (click)="edit($index)">
+                        <input type="button" value="Delete" (click)="delete($index)">
                     </td>
                 </tr>
                 }

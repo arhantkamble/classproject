@@ -10,7 +10,7 @@ import { SetAttendance } from "../set_attendance/set_attendance_component";
     standalone: true,
     templateUrl:'student_panel_component.html' ,
     styleUrl: 'student_panel_component.scss' ,
-    imports:[FormsModule, AddStudent, SetAttendance]
+    imports:[FormsModule, AddStudent]
 })
 
 export class StudentPanel{

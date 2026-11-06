@@ -28,10 +28,11 @@ export class AddStudent {
     address = "";
     password = "";
 
-    // Image Upload Tracking Properties
     selectedFiles: File[] = [];
     imagePreviews: string[] = [];
     imageError: string | null = null;
+
+    editIndex = -1;
 
     students: any[] = [
         {
@@ -86,6 +87,11 @@ export class AddStudent {
     }
 
     save() {
+        if (this.editIndex !== -1) {
+            alert("You are editing a student. Please click Update.");
+            return;
+        }
+
         this.students.push({
             id: parseInt(this.id),
             rollNo: parseInt(this.rollNo),
@@ -100,10 +106,65 @@ export class AddStudent {
             email: this.email,
             address: this.address,
             password: this.password,
-            images: [...this.imagePreviews] // Saves current images to student row
+            images: [...this.imagePreviews] 
         });
 
-        this.clearForm(); // Clears text fields and files after click
+        this.clearForm(); 
+    }
+
+    edit(index: number) 
+    {
+        const student = this.students[index];
+
+        this.editIndex = index;
+
+        this.id = String(student.id);
+        this.rollNo = String(student.rollNo);
+        this.name = student.name;
+        this.fatherName = student.fatherName;
+        this.gender = student.gender;
+        this.age = String(student.age);
+        this.branch = student.branch;
+        this.year = String(student.year);
+        this.sem = String(student.sem);
+        this.mobileNo = String(student.mobileNo);
+        this.email = student.email;
+        this.address = student.address;
+        this.password = student.password;
+
+        this.imagePreviews = [...(student.images || [])];
+
+        this.selectedFiles = [];
+        this.imageError = null;
+    }
+    
+    update() 
+    {
+        if (this.editIndex === -1) {
+            alert("Please select a student to update");
+            return;
+        }
+
+        this.students[this.editIndex] = {
+            id: parseInt(this.id),
+            rollNo: parseInt(this.rollNo),
+            name: this.name,
+            fatherName: this.fatherName,
+            gender: this.gender,
+            age: parseInt(this.age),
+            branch: this.branch,
+            year: parseInt(this.year),
+            sem: parseInt(this.sem),
+            mobileNo: parseInt(this.mobileNo),
+            email: this.email,
+            address: this.address,
+            password: this.password,
+            images: [...this.imagePreviews]
+        };
+
+        alert("Student updated successfully");
+
+        this.clearForm();
     }
 
     clearForm() {
@@ -121,10 +182,21 @@ export class AddStudent {
         this.address = "";
         this.password = "";
         
-        // Reset image picker states
         this.selectedFiles = [];
         this.imagePreviews = [];
         this.imageError = null;
+
+        this.editIndex = -1;
+    }
+
+    delete(index: number) {
+        if (confirm("Do you want to delete this student?")) {
+
+            this.students.splice(index, 1);
+
+            alert("Student deleted successfully");
+
+        }
     }
 
     exit() {

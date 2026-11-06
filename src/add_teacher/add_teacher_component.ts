@@ -41,6 +41,15 @@ export class AddTeacher{
         this.logic();
     }
 
+    clearForm() {
+        this.tId="";
+        this.tName="";
+        this.tMobNum="";
+        this.tEmail="";
+        this.tPass="";
+    }
+
+
     edit(index: number) {
         const teacher = this.teachers[index];
 

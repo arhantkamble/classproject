@@ -1,5 +1,5 @@
 @if (takeAttendance){
-    <set_attendance (onStuBack)="handleBack()" (onStuExit)="handleExit()"></set_attendance>
+    <set_attendance (onTeaBack)="handleBack()" (onTeaExit)="handleExit()"></set_attendance>
 }
 @else if (addStudent) {
     <add_student (onStuBack)="handleBack()" (onStuExit)="handleExit()"></add_student>
