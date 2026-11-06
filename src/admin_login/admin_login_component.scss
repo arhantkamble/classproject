@@ -1,0 +1,56 @@
+
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    padding: 20px;
+}
+
+form {
+    background: #FFFFFF;
+    padding: 35px;
+    border-top: 5px solid #F5B400;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 15px;
+    font-weight: 600;
+}
+
+tr:first-child td {
+    background: #202124;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 21px;
+    padding: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #C9C5BA;
+    border-radius: 3px;
+}
+
+input[type="button"],
+input[type="reset"] {
+    background: #F5B400;
+    padding: 11px 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    background: #D99D00;
+}

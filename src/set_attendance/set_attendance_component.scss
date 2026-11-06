@@ -1,0 +1,38 @@
+
+:host {
+    display: block;
+    padding: 30px;
+    background: #FFFFFF;
+    border-top: 5px solid #F5B400;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 15px;
+}
+
+select, input[type="date"] {
+    padding: 11px;
+    min-width: 200px;
+    border: 1px solid #C9C5BA;
+    border-radius: 3px;
+    background: #FFFFFF;
+}
+
+input[type="button"] {
+    background: #F5B400;
+    color: #202124;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background: #D99D00;
+}

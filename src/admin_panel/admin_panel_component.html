@@ -1,12 +1,18 @@
-@if (addStudent) {
-    <add_student (onStuBack)=handleBack() (onStuExit)=handleExit()></add_student>
+@if (takeAttendance){
+    <set_attendance (onStuBack)="handleBack()" (onStuExit)="handleExit()"></set_attendance>
+}
+@else if (addStudent) {
+    <add_student (onStuBack)="handleBack()" (onStuExit)="handleExit()"></add_student>
 }
 @else if (addTeacher) {
-    <add_teacher (onTeaBack)=handleBack() (onTeaExit)=handleExit()></add_teacher>
+    <add_teacher (onTeaBack)="handleBack()" (onTeaExit)="handleExit()"></add_teacher>
 }
 @else {
         <h2>Admin Panel</h2>
+        <input type="button" value="Take Attendance" (click)="takeAttend()">
         <input type="button" value="Add Student" (click)="addStu()">
         <input type="button" value="Add Teacher" (click)="addTea()">
         <input type="button" value="Exit" (click)="exit()">
 }
+
+ 

@@ -2,14 +2,14 @@ import { Component, output } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 @Component({
-    selector: "add_teacher",
+    selector: "set_attendance",
     imports:[FormsModule],
     standalone:true,
     styleUrl: "set_attendance_component.scss",
     templateUrl: "set_attendance_component.html"
 })
 
-export class AddTeacher{
+export class SetAttendance{
 
     onTeaBack=output<void>();
     onTeaExit=output<void>();
@@ -55,7 +55,7 @@ export class AddTeacher{
     }
 
     genReport(){
-        
+
     }
 
     back(){

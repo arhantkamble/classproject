@@ -1,0 +1,32 @@
+
+:host {
+    display: block;
+    min-height: 70vh;
+    padding: 30px;
+    text-align: center;
+}
+
+h2 {
+    background: #202124;
+    color: #FFFFFF;
+    padding: 25px;
+    border-bottom: 5px solid #F5B400;
+    margin-bottom: 30px;
+}
+
+input[type="button"] {
+    min-width: 180px;
+    padding: 16px 22px;
+    margin: 12px;
+    background: #202124;
+    color: #FFFFFF;
+    border: 2px solid #F5B400;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background: #F5B400;
+    color: #202124;
+}

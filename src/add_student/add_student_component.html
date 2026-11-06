@@ -53,7 +53,6 @@
                                     </td>
                                 </tr>
                             </table>
-
                         </th>
                     </tr>
                     <tr>
@@ -68,7 +67,6 @@
                             <input type="text" placeholder="Enter student's Branch" name="branch" [(ngModel)]="branch" />
                         </th>
                     </tr>
-
                     <tr>
                         <th>Year</th>
                         <th>
@@ -110,14 +108,34 @@
                             <input type="button" value="save" (click)="save()">
                         </th>
                         <th>
-                            <input type="reset" value="clear"/>
+                            <input type="reset" value="clear" (click)="clearForm()"/>
                         </th>
+                    </tr>
+                    <!-- Image Input Integrated Here -->
+                    <tr>
+                        <td colspan="3" style="padding-top: 15px;">
+                            <label style="font-weight: bold; display: block; margin-bottom: 5px;">Upload 3 Student Images:</label>
+                            <input 
+                                type="file" 
+                                accept="image/*" 
+                                multiple 
+                                (change)="onFileSelected($event)" />
+                            
+                            <p *ngIf="imageError" style="color: red; margin: 5px 0 0 0; font-size: 13px;">{{ imageError }}</p>
+                            
+                            <!-- Form Previews -->
+                            <div style="display: flex; gap: 8px; margin-top: 10px;" *ngIf="imagePreviews.length > 0">
+                                <div *ngFor="let src of imagePreviews">
+                                    <img [src]="src" style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px; border: 1px solid #ccc;" />
+                                </div>
+                            </div>
+                        </td>
                     </tr>
                 </table>
             </form>
         </td>
-        <td>
-            <table border="{1}">
+        <td style="vertical-align: top;">
+            <table border="1">
                 <tr>
                     <th>sr.</th>
                     <th>Student ID</th>
@@ -133,9 +151,9 @@
                     <th>Email</th>
                     <th>Address</th>
                     <th>Password</th>
-
+                    <th>Photos</th>
                 </tr>
-                @for(student of students;track student.id){
+                @for(student of students; track student.id){
                 <tr>
                     <td>{{$index+1}}</td>
                     <td>{{student.id}}</td>
@@ -151,7 +169,12 @@
                     <td>{{student.email}}</td>
                     <td>{{student.address}}</td>
                     <td>{{student.password}}</td>
-
+                    <td>
+                        <!-- Saved Student Photos List -->
+                        <div style="display: flex; gap: 4px;" *ngIf="student.images && student.images.length > 0">
+                            <img *ngFor="let img of student.images" [src]="img" style="width: 35px; height: 35px; object-fit: cover; border-radius: 2px;" />
+                        </div>
+                    </td>
                 </tr>
                 }
             </table>
